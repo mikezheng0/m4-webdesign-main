@@ -8,8 +8,8 @@
  * Controller of the m4WebDevApp
  */
 angular.module('m4WebDevApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
+  .controller('MainCtrl', function ($scope) {
+    $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
