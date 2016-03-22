@@ -1,34 +1,37 @@
 <form role = "form" action = "">
-  <h1 id = "main_h1">Contact Us</h1>
+  <h1 id = "main_h1">Contact Us</h1> <br/>
+
+  <h2>Give Us A Shout!</h2><br/>
+
 
   <fieldset>
     <!-- first name -->
     <div class = "form-group col-lg-6">
-        <label for = "firstName" class = "control-label">First Name:</label>
+        <label for = "firstName" class = "control-label">First Name *</label>
         <input type = "text" class = "form-control" id = "firstName" placeholder = "First Name" required>
     </div>
 
     <!-- last name -->
     <div class = "form-group col-lg-6">
-        <label for = "lastName" class = "control-label">Last Name:</label>
+        <label for = "lastName" class = "control-label">Last Name *</label>
         <input type = "text" class = "form-control" id = "lastName" placeholder = "Last Name" required>
     </div>
 
     <!-- email -->
     <div class = "form-group col-lg-6">
-        <label for = "inputEmail" class = "control-label">Email:</label>
+        <label for = "inputEmail" class = "control-label">Email *</label>
         <input type = "email" class = "form-control" id = "inputEmail" placeholder = "E-mail" required>
     </div>
 
     <!-- phone number -->
     <div class = "form-group col-lg-6">
-        <label for = "phone" class = "control-label">Phone:</label>
-        <input type="text" class="form-control" id ="phone" data-format="(ddd) ddd-dddd" placeholder = "1 (905)-802-2305">
+        <label class = "control-label">Phone</label>
+        <input type="text" class="form-control bfh-phone" id ="phone" data-format="+1(ddd)ddd-dddd" placeholder="1 (905)-802-2305">
     </div>
 
     <!-- message -->
     <div class = "form-group col-lg-12">
-      <label for="message"  class = "control-label">Message:</label>
+      <label for="message"  class = "control-label">Message *</label>
         <textarea class="form-control" rows="5" id="message" placeholder="Type Your Message Here" required></textarea>
     </div>
 
@@ -38,4 +41,9 @@
         <button type = "submit" class = "btn btn-primary">Submit</button>
     </div>
   </fieldset>
+
+  <li id="social-icons" class="website inner-col">
+    <a title="FACEBOOK" href="https://www.facebook.com/M4-Web-Development-1136716383018907/?ref=hl"><img src="images/facebook.png" height="42" width="42"></a><a title="TWITTER" href="https://twitter.com/M4WebDev"><img src="images/twitter.png" height="42" width="42"></a><a title="LINKEDIN" href="https://ca.linkedin.com/in/m4-web-development-49466b118"><img src="images/linkedin.png" height="42" width="42"></a><br/><br/>
+    <span>Visit us on our social networks!</span>
+  </li>
 </form>
