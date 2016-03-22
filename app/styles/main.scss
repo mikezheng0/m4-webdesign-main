@@ -12,6 +12,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  line-height:1.6;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -118,7 +121,7 @@ a.active {
   padding: 50px 20px;
 }
 section {
-  padding: 50px 0 30px 0;
+  padding: 0;
 }
 footer {
   text-align: center;
@@ -131,6 +134,19 @@ button {
   color: #fff;
   cursor: pointer;
 }
+
+// ADDED AUTHOR CSS
+
+#about{
+   background-color: #00AC7F;
+   padding: 150px 0 150px 0;
+ }
+#contact{
+  padding: 30px 0 50px 0;
+}
+
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
