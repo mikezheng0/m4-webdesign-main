@@ -145,6 +145,19 @@ button {
   padding: 30px 0 50px 0;
 }
 
+input.ng-invalid.ng-touched {
+  border: 1px solid #FF0000;
+}
+input.ng-valid.ng-touched {
+  border: 1px solid #00A000;
+}
+.ng-invalid.btn{
+  background-color: #0d3349;
+}
+.error{
+  color: #FF0000;
+  padding-bottom: 5px;
+}
 
 
 /* Responsive: Portrait tablets and up */
