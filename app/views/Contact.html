@@ -1,35 +1,38 @@
-<form role = "form" action = "">
+<form name="contactform" novalidate>
   <h1 id = "main_h1">Contact Us</h1><br>
 
   <fieldset>
     <!-- first name -->
     <div class = "form-group col-lg-6">
         <label for = "firstName" class = "control-label">First Name *</label>
-        <input type = "text" class = "form-control" id = "firstName" placeholder = "First Name" required>
+        <input type = "text" class = "form-control" id = "firstName" placeholder = "First Name" name="firstname" ng-model="user.firstname" ng-required="true">
+        <p ng-show="contactform.firstname.$invalid && contactform.firstname.$touched">Please enter your first name.</p>
     </div>
 
     <!-- last name -->
     <div class = "form-group col-lg-6">
         <label for = "lastName" class = "control-label">Last Name *</label>
-        <input type = "text" class = "form-control" id = "lastName" placeholder = "Last Name" required>
+        <input type = "text" class = "form-control" id = "lastName" placeholder = "Last Name" name="lastname" ng-model="user.lastname" ng-required="true">
+        <p ng-show="contactform.lastname.$invalid && contactform.lastname.$touched">Please enter your last name.</p>
     </div>
 
     <!-- email -->
     <div class = "form-group col-lg-6">
         <label for = "inputEmail" class = "control-label">Email *</label>
-        <input type = "email" class = "form-control" id = "inputEmail" placeholder = "E-mail" required>
+        <input type = "email" class = "form-control" id = "inputEmail" placeholder = "E-mail" name="email" ng-model="user.email" ng-required="true">
+      <p ng-show="contactform.user.email.$invalid && contactform.email.$touched">Please enter a valid email.</p>
     </div>
 
     <!-- phone number -->
     <div class = "form-group col-lg-6">
         <label class = "control-label">Phone</label>
-        <input type="text" class="form-control bfh-phone" id ="phone" data-format="+1(ddd)ddd-dddd" placeholder="1 (905)-802-2305">
+        <input type="text" class="form-control bfh-phone" id ="phone" name="phone" data-format="+1(ddd)ddd-dddd" placeholder="1 (905)-802-2305" ng-model="user.phone">
     </div>
 
     <!-- message -->
     <div class = "form-group col-lg-12">
       <label for="message"  class = "control-label">Message *</label>
-        <textarea class="form-control" rows="5" id="message" placeholder="Type Your Message Here" required></textarea>
+        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Type Your Message Here" ng-model="user.message"></textarea>
     </div>
 
 
