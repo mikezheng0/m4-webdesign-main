@@ -1,5 +1,5 @@
-<form name="contactform" novalidate>
-  <h1 id = "main_h1">Contact Us</h1><br>
+<form id = "contactus" name="contactform" novalidate>
+  <h1 >Contact Us</h1><br>
 
   <fieldset>
     <!-- first name -->
@@ -19,32 +19,32 @@
     </div>
 
     <div class="row">
-    <!-- email -->
-    <div class = "form-group col-lg-6">
-        <label for = "inputEmail" class = "control-label">Email *</label>
-        <input type = "email" class = "form-control" id = "inputEmail" placeholder = "E-mail" name="email" ng-model="user.email" ng-required="true">
-      <p class="error" ng-show="contactform.email.$invalid && contactform.email.$touched">Please enter a valid email.</p>
-    </div>
+      <!-- email -->
+      <div class = "form-group col-lg-6">
+          <label for = "inputEmail" class = "control-label">Email *</label>
+          <input type = "email" class = "form-control" id = "inputEmail" placeholder = "E-mail" name="email" ng-model="user.email" ng-required="true">
+        <p class="error" ng-show="contactform.email.$invalid && contactform.email.$touched">Please enter a valid email.</p>
+      </div>
 
-    <!-- phone number -->
-    <div class = "form-group col-lg-6">
-        <label class = "control-label">Phone</label>
-        <input type="text" class="form-control bfh-phone" id ="phone" name="phone" data-format="+1(ddd)ddd-dddd" placeholder="1 (905)-802-2305" ng-model="user.phone">
-    </div>
+      <!-- phone number -->
+      <div class = "form-group col-lg-6">
+          <label class = "control-label">Phone</label>
+          <input type="text" class="form-control bfh-phone" id ="phone" name="phone" data-format="+1(ddd)ddd-dddd" placeholder="1 (905)-802-2305" ng-model="user.phone">
+      </div>
     </div>
 
     <div class="row">
-    <!-- message -->
-    <div class = "form-group col-lg-12">
-      <label for="message"  class = "control-label">Message</label>
-        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Type Your Message Here" ng-model="user.message"></textarea>
-    </div>
+      <!-- message -->
+      <div class = "form-group col-lg-12">
+        <label for="message"  class = "control-label">Message</label>
+          <textarea class="form-control" rows="5" id="message" name="message" placeholder="Type Your Message Here" ng-model="user.message"></textarea>
+      </div>
 
 
-    <!-- submit button and reload page -->
-    <div class = "form-group col-lg-10">
-        <button type = "submit" class = "btn btn-primary">Submit</button>
-    </div>
+      <!-- submit button and reload page -->
+      <div class = "form-group col-lg-10">
+        <md-button class="md-raised md-cornered">Submit</md-button>
+      </div>
     </div>
 
   </fieldset>

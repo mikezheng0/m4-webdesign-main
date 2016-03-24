@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -20,18 +21,35 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <nav>
-      <section id="section-1">
-        <!--<img src="images/header.jpg" alt="" />-->
-      </section>
-      <ul>
-        <li><a href="#section-1" du-smooth-scroll du-scrollspy>Home</a></li>
-        <li><a href="#about" du-smooth-scroll du-scrollspy>About</a></li>
-        <li><a du-smooth-scroll="contact" du-scrollspy>Contact</a></li>
-      </ul>
-    </nav>
+    <!--<nav>-->
+      <!--<section id="section-1">-->
+        <!--&lt;!&ndash;<img src="images/header.jpg" alt="" />&ndash;&gt;-->
+      <!--</section>-->
+      <!--<ul>-->
+        <!--<li><a href="#section-1" du-smooth-scroll du-scrollspy>Home</a></li>-->
+        <!--<li><a href="#about" du-smooth-scroll du-scrollspy>About</a></li>-->
+        <!--<li><a du-smooth-scroll="contact" du-scrollspy>Contact</a></li>-->
+      <!--</ul>-->
+    <!--</nav>-->
 
+    <header md-page-header id="home">
+      <div md-header-picture style="background-image:url(images/header.jpg)"></div>
+      <md-toolbar scroll>
+        <div class="md-toolbar-tools">
+          <h2 md-header-title flex>M4 WebDev</h2>
+          <md-button href="#home" du-smooth-scroll du-scrollspy class="md-tools" aria-label="Home">
+            Home
+          </md-button>
+          <md-button href="#about" du-smooth-scroll du-scrollspy class="md-tools" aria-label="More">
+            About Us
+          </md-button>
+          <md-button href="#contactus" du-smooth-scroll du-scrollspy class="md-tools" aria-label="More">
+            Contact Us
+          </md-button>
 
+        </div>
+      </md-toolbar>
+    </header>
 
 
 
@@ -68,6 +86,9 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -75,6 +96,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/directives/scrollbar.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
