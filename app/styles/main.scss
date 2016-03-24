@@ -2,7 +2,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-
+$default : #00AC7F;
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -111,7 +111,7 @@ a:hover {
   background: #fff;
 }
 a.active {
-  background: #00AC7F;
+  background: $default;
   color: #fff;
 }
 .wrap {
@@ -130,7 +130,7 @@ button {
   font-size: 18px;
   border: 0;
   padding: 15px 30px;
-  background: #00AC7F;
+  background: $default;
   color: #fff;
   cursor: pointer;
 }
@@ -138,7 +138,7 @@ button {
 // ADDED AUTHOR CSS
 
 #about{
-   background-color: #00AC7F;
+   background-color: $default;
    padding: 150px 0 150px 0;
  }
 #contact{

@@ -80,7 +80,7 @@ angular.module('m4WebDevApp')
       handleStyle(dimensions);
       scope.$apply();
     });
-    
+
   };
 });
 //
