@@ -10,7 +10,7 @@
 angular.module('m4WebDevApp')
   .controller('MainCtrl', function($scope, $document){
       $scope.toTheTop = function() {
-        $document.scrollTopAnimated(0, 5000).then(function() {
+        $document.scrollTopAnimated(0, 1000).then(function() {
           console && console.log('You just scrolled to the top!');
         });
       }
@@ -21,4 +21,6 @@ angular.module('m4WebDevApp')
     $scope.aboutView = "views/about.html";
     $scope.contactView = "views/contact.html";
     }
-  ).value('duScrollOffset', 50);;
+  )
+  .value('duScrollOffset', 50)
+  .value('duScrollBottomSpy', true);
