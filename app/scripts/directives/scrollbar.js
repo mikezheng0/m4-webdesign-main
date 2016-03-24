@@ -73,14 +73,14 @@ angular.module('m4WebDevApp')
       scope.$apply();
     });
 
-    /* Resize event listener
+    //Resize event listener
     angular.element($window).bind('resize',function () {
-      baseDimensions = header.getBoundingClientRect();
+      //baseDimensions = header.getBoundingClientRect();
       var dimensions = header.getBoundingClientRect();
       handleStyle(dimensions);
       scope.$apply();
     });
-    */
+    
   };
 });
 //
