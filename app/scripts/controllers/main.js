@@ -21,4 +21,4 @@ angular.module('m4WebDevApp')
     $scope.aboutView = "views/about.html";
     $scope.contactView = "views/contact.html";
     }
-  ).value('duScrollOffset', 30);;
+  ).value('duScrollOffset', 50);;
