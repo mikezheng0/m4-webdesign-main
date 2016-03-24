@@ -36,8 +36,9 @@
     <div class="row">
       <!-- message -->
       <div class = "form-group col-lg-12">
-        <label for="message"  class = "control-label">Message</label>
-          <textarea style="resize:none" class="form-control" rows="5" id="message" name="message" placeholder="Type Your Message Here" ng-model="user.message"></textarea>
+        <label for="message"  class = "control-label">Message *</label>
+          <textarea style="resize:none" class="form-control" rows="5" id="message" name="message" placeholder="Type Your Message Here" ng-model="user.message" ng-required="true"></textarea>
+        <p class="error" ng-show="contactform.message.$invalid && contactform.message.$touched">Please enter a message.</p>
       </div>
 
 
@@ -51,9 +52,9 @@
 
   <hr style="border-top:1px solid black">
   <div>
-      <a class="contact-hyperlink form-group col-md-4"  title="FACEBOOK" href="https://www.facebook.com/M4-Web-Development-1136716383018907/?ref=hl"><img src="images/facebook.png" height="42" width="42">Like us on Facebook!</a>
-      <a class="contact-hyperlink form-group col-md-4" title="TWITTER" href="https://twitter.com/M4WebDev"><img src="images/twitter.png"  height="42" width="42">Follow us on Twitter!</a>
-      <a class="contact-hyperlink form-group col-md-4" title="LINKEDIN" href="https://ca.linkedin.com/in/m4-web-development-49466b118"><img src="images/linkedin.png" height="42" width="42">Visit us on LinkedIn</a><br/><br/>
+      <a class="contact-hyperlink form-group col-md-4"  title="FACEBOOK" href="https://www.facebook.com/M4-Web-Development-1136716383018907/?ref=hl"><img src="images/facebook.png" height="42" width="42">&nbsp;Like us on Facebook!</a>
+      <a class="contact-hyperlink form-group col-md-4" title="TWITTER" href="https://twitter.com/M4WebDev"><img src="images/twitter.png"  height="42" width="42">&nbsp;Follow us on Twitter!</a>
+      <a class="contact-hyperlink form-group col-md-4" title="LINKEDIN" href="https://ca.linkedin.com/in/m4-web-development-49466b118"><img src="images/linkedin.png" height="42" width="42">&nbsp;Visit us on LinkedIn</a><br/><br/>
   </div>
   <hr style="border-top:1px solid black">
 </form>

@@ -24,7 +24,7 @@ angular.module('m4WebDevApp')
     /* The zoom scale of the toolbar title when it's placed at the bottom of the header picture */
     var titleZoom      = 1.5;
     /* The primary color palette used by Angular Material */
-    var primaryColor   = [63,81,181];
+    var primaryColor   = [23,62,67];
 
     function styleInit () {
       title.css('padding-left','16px');
@@ -80,7 +80,7 @@ angular.module('m4WebDevApp')
       handleStyle(dimensions);
       scope.$apply();
     });
-    
+
   };
 });
 //
