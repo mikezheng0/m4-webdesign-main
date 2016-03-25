@@ -4,3 +4,6 @@
 /.sass-cache
 /bower_components
 .idea/workspace.xml
+/server/node_modules
+/server/dist
+/server/bower_components
