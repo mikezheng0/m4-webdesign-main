@@ -5,16 +5,16 @@
     <!-- first name -->
     <div class="row">
       <div class = "form-group col-lg-6">
-          <label for = "firstName" class = "control-label">First Name *</label>
-          <input type = "text" class = "form-control" id = "firstName" placeholder = "First Name" name="firstname" ng-model="user.firstname" ng-required="true">
-          <p class="error" ng-show="contactform.firstname.$invalid && contactform.firstname.$touched">Please enter your first name.</p>
+          <label for = "name" class = "control-label">Name *</label>
+          <input type = "text" class = "form-control" id = "name" placeholder = "Name" name="name" ng-model="user.name" ng-required="true">
+          <p class="error" ng-show="contactform.name.$invalid && contactform.name.$touched">Please enter your name.</p>
       </div>
 
       <!-- last name -->
       <div class = "form-group col-lg-6">
-          <label for = "lastName" class = "control-label">Last Name *</label>
-          <input type = "text" class = "form-control" id = "lastName" placeholder = "Last Name" name="lastname" ng-model="user.lastname" ng-required="true">
-          <p class="error" ng-show="contactform.lastname.$invalid && contactform.lastname.$touched">Please enter your last name.</p>
+          <label for = "Organization" class = "control-label">Organization *</label>
+          <input type = "text" class = "form-control" id = "organization" placeholder = "Organization" name="organization" ng-model="user.organization" ng-required="true">
+          <p class="error" ng-show="contactform.organization.$invalid && contactform.organization.$touched">Please enter your organization name.</p>
       </div>
     </div>
 
@@ -36,22 +36,26 @@
     <div class="row">
       <!-- message -->
       <div class = "form-group col-lg-12">
-        <label for="message"  class = "control-label">Message</label>
-          <textarea class="form-control" rows="5" id="message" name="message" placeholder="Type Your Message Here" ng-model="user.message"></textarea>
+        <label for="message"  class = "control-label">Message *</label>
+          <textarea style="resize:none" class="form-control" rows="5" id="message" name="message" placeholder="Type Your Message Here" ng-model="user.message" ng-required="true"></textarea>
+        <p class="error" ng-show="contactform.message.$invalid && contactform.message.$touched">Please enter a message.</p>
       </div>
 
 
-      <!-- submit button and reload page -->
+      <!-- submit button-->
       <div class = "form-group col-lg-10">
         <md-button class="md-raised md-cornered">Submit</md-button>
       </div>
     </div>
 
   </fieldset>
+  
+  <hr style="border-top:1px solid black">
+  <div>
+      <a class="contact-hyperlink form-group col-md-4"  title="FACEBOOK" href="https://www.facebook.com/M4-Web-Development-1136716383018907/?ref=hl"><img src="images/facebook.png" height="42" width="42">&nbsp;Like us on Facebook!</a>
+      <a class="contact-hyperlink form-group col-md-4" title="TWITTER" href="https://twitter.com/M4WebDev"><img src="images/twitter.png"  height="42" width="42">&nbsp;Follow us on Twitter!</a>
+      <a class="contact-hyperlink form-group col-md-4" title="LINKEDIN" href="https://ca.linkedin.com/in/m4-web-development-49466b118"><img src="images/linkedin.png" height="42" width="42">&nbsp;Visit us on LinkedIn</a><br/><br/>
 
-  <div id="social-icons">
-    <a title="FACEBOOK" href="https://www.facebook.com/M4-Web-Development-1136716383018907/?ref=hl"><img src="images/facebook.png" height="42" width="42">hjhkhhhk</a>
-    <a title="TWITTER" href="https://twitter.com/M4WebDev"><img src="images/twitter.png"  height="42" width="42"></a>
-    <a title="LINKEDIN" href="https://ca.linkedin.com/in/m4-web-development-49466b118"><img src="images/linkedin.png"  height="42" width="42"></a><br/><br/>
   </div>
+  <hr style="border-top:1px solid black">
 </form>
