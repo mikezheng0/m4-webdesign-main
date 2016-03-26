@@ -4,6 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
 
 var routes = require('./routes/index.js');
 var users = require('./routes/user.js');
@@ -20,6 +21,46 @@ app.use(cookieParser());
  * Development Settings
  */
 
+
+
+// create reusable transporter object using the default SMTP transport
+var transporter = nodemailer.createTransport('smtps://m4.dev.mailer.dummy@gmail.com:4NUZ,aR=)>IAwzq@smtp.gmail.com');
+
+// setup e-mail data with unicode symbols
+var mailOptions = {
+  from: '"M4sitemailer" <m4.dev.mailer.dummy@gmail.com>', // sender address
+  to: 'info@m4webdev.com', // list of receivers
+  subject: 'New Request', // Subject line
+  text: 'Hello world', // plaintext body
+  html: '<b>Hello world </b>' // html body
+};
+
+app.post("/", function(req, res){
+  console.log('Message sent: '+ req.body.name);
+  res.end("It worked! from nodejs");
+
+  var mailOptions = {
+    from: `"${req.body.name}" <${req.body.email}>`, // sender address
+    to: 'info@m4webdev.com', // list of receivers
+    subject: 'New Request', // Subject line
+    text: `Name: ${req.body.name}\n Email:${req.body.email}\n Phone Number: ${req.body.phone}\n Organization: ${req.body.organization}\n Message: ${req.body.message}`, // plaintext body
+    html: `<p>Name: ${req.body.name}</p><p>Email: ${req.body.email}</p><p>Phone Number: ${req.body.phone}</p><p>Organization: ${req.body.organization}</p><p>Message: ${req.body.message}</p>` // html body
+  };
+  transporter.sendMail(mailOptions, function(error, info){
+  if(error){
+    return console.log(error);
+  }
+  console.log('Message sent: ' + info.response);
+});
+});
+// send mail with defined transport object
+//transporter.sendMail(mailOptions, function(error, info){
+//  if(error){
+//    return console.log(error);
+//  }
+//  console.log('Message sent: ' + info.response);
+//});
+
 if ('development' == app.get('env')) {
   app.use(express.static(path.join(__dirname, '../.tmp')));
   app.use(express.static(path.join(__dirname, '../app')));
@@ -32,6 +73,7 @@ if ('development' == app.get('env')) {
   });
 
 }
+
 
 /**
  * Production Settings

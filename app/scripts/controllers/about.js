@@ -19,4 +19,4 @@ angular.module('m4WebDevApp')
         $document.scrollToElementAnimated(section3);
       }
     }
-  ).value('duScrollOffset', 30);;
+  ).value('duScrollOffset', 30);
