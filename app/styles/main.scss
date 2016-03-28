@@ -7,6 +7,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 $colorSet1: #fae596;
 $colorSet2: #3fb0ac;
 $colorSet3:rgb(23,62,67);
+$colorSet4: #dddfd4;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -143,11 +144,13 @@ button {
 // ADDED AUTHOR CSS
 
 #about{
-   background-color: $colorSet2;
+   background-color: $colorSet4;
    padding: 150px 0 150px 0;
  }
 #contact{
   padding: 30px 0 50px 0;
+  background-color: $colorSet3;
+  color: white;
 }
 
 input.ng-invalid.ng-touched {
@@ -178,6 +181,70 @@ input.ng-valid.ng-touched {
   position:fixed;
   top:0;
 }
+
+//slide show images Still need to convert to Sass mixin
+
+#tech-slideshow {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+#tech-slideshow > div {
+  height: 200px;
+  width: 2200px;
+  background: url(../images/slideshow.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  -moz-transition:  opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+
+  /* Slow */
+  -webkit-animation: moveSlideshow 60s linear infinite;
+  -moz-animation:    moveSlideshow 60s linear infinite;
+
+  -webkit-transform: translate3d(0,0,0); /* Performance */
+
+}
+
+@-webkit-keyframes moveSlideshow {
+  0%   {
+    -webkit-transform: translateX(0);
+    -moz-transform:    translateX(0);
+    -ms-transform:     translateX(0);
+    -o-transform:      translateX(0);
+    transform:         translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1684px);
+    -moz-transform:    translateX(-1684px);
+    -ms-transform:     translateX(-1684px);
+    -o-transform:      translateX(-1684px);
+    transform:         translateX(-1684px);
+  }
+}
+@-moz-keyframes moveSlideshow {
+  0%   {
+    -webkit-transform: translateX(0);
+    -moz-transform:    translateX(0);
+    -ms-transform:     translateX(0);
+    -o-transform:      translateX(0);
+    transform:         translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1684px);
+    -moz-transform:    translateX(-1684px);
+    -ms-transform:     translateX(-1684px);
+    -o-transform:      translateX(-1684px);
+    transform:         translateX(-1684px);
+  }
+}
+
+
 
 /* I made a simple scale animation on float action button during scroll */
 
