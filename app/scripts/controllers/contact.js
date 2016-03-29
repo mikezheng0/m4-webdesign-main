@@ -3,6 +3,7 @@
  */
 angular.module('m4WebDevApp')
   .controller('ContactCtrl', function($scope, $http){
+    $scope.user = {messsage: '\n\n\n\n'};
     $scope.submitForm = function() {
       $http.post('/', {name: $scope.user.name, organization:$scope.user.organization, email:$scope.user.email, phone:$scope.user.phone, message:$scope.user.message}).success(function (data) {
         console.log(data);

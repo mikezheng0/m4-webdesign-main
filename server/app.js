@@ -38,7 +38,7 @@ var mailOptions = {
 app.post("/", function(req, res){
   console.log('Message sent: '+ req.body.name);
   res.end("It worked! from nodejs");
-
+  if(req.body.name && req.body.email && req.body.message && req.body.)
   var mailOptions = {
     from: `"${req.body.name}" <${req.body.email}>`, // sender address
     to: 'info@m4webdev.com', // list of receivers

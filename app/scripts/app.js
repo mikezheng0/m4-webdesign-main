@@ -16,6 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngMaterial',
+    'ngMessages',
     'duScroll'
   ])
   .config(function ($routeProvider) {

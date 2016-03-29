@@ -4,45 +4,61 @@
   <fieldset>
     <!-- first name -->
     <div class="row">
-      <div class = "form-group col-lg-6">
-          <label for = "name" class = "control-label">Name *</label>
-          <input type = "text" class = "form-control" id = "name" placeholder = "Name" name="name" ng-model="user.name" ng-required="true">
-          <p class="error" ng-show="contactform.name.$invalid && contactform.name.$touched">Please enter your name.</p>
-      </div>
+      <md-input-container class="md-block col-lg-6">
+        <label>Name</label>
+        <input md-maxlength="30" required md-no-asterisk name="name" ng-model="user.name">
+        <div ng-messages="user.name.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+        </div>
+      </md-input-container>
 
       <!-- last name -->
-      <div class = "form-group col-lg-6">
-          <label for = "Organization" class = "control-label">Organization *</label>
-          <input type = "text" class = "form-control" id = "organization" placeholder = "Organization" name="organization" ng-model="user.organization" ng-required="true">
-          <p class="error" ng-show="contactform.organization.$invalid && contactform.organization.$touched">Please enter your organization name.</p>
-      </div>
+      <md-input-container class="md-block col-lg-6">
+        <label>Organization</label>
+        <input md-maxlength="30" required md-no-asterisk name="organization" ng-model="user.organization">
+        <div ng-messages="user.organization.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="md-maxlength">The organization has to be less than 30 characters long.</div>
+        </div>
+      </md-input-container>
     </div>
 
     <div class="row">
       <!-- email -->
-      <div class = "form-group col-lg-6">
-          <label for = "inputEmail" class = "control-label">Email *</label>
-          <input type = "email" class = "form-control" id = "inputEmail" placeholder = "E-mail" name="email" ng-model="user.email" ng-required="true">
-        <p class="error" ng-show="contactform.email.$invalid && contactform.email.$touched">Please enter a valid email.</p>
-      </div>
+      <md-input-container class="md-block col-lg-6">
+        <label>Email</label>
+        <input required type="email" name="email" ng-model="user.email"
+               minlength="4" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+        <div ng-messages="user.email.$error" role="alert">
+          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+            Your email must be between 4 and 100 characters long and look like an e-mail address.
+          </div>
+        </div>
+      </md-input-container>
 
       <!-- phone number -->
-      <div class = "form-group col-lg-6">
-          <label class = "control-label">Phone</label>
-          <input type="text" class="form-control bfh-phone" id ="phone" name="phone" data-format="+1(ddd)ddd-dddd" placeholder="1 (905)-802-2305" ng-model="user.phone">
-      </div>
+      <md-input-container class="md-block col-lg-6">
+        <label>Phone Number</label>
+        <input required type="email" name="phone" ng-model="user.phone"
+               minlength="4" maxlength="100" ng-pattern="/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/" />
+        <div ng-messages="user.phone.$error" role="alert">
+          <div ng-message-exp="['minlength', 'maxlength', 'pattern']">
+            Your email must be between 4 and 100 characters long and look like an e-mail address.
+          </div>
+        </div>
+      </md-input-container>
     </div>
 
     <div class="row">
       <!-- message -->
-      <div class = "form-group col-lg-12">
-        <label for="message"  class = "control-label">Message *</label>
-          <textarea style="resize:none" class="form-control" rows="5" id="message" name="message" placeholder="Type Your Message Here" ng-model="user.message" ng-required="true"></textarea>
-        <p class="error" ng-show="contactform.message.$invalid && contactform.message.$touched">Please enter a message.</p>
-      </div>
+      <md-input-container class="md-block col-lg-12">
+        <label>Biography</label>
+        <textarea ng-model="user.message" md-maxlength="5000" rows="8" md-select-on-focus></textarea>
+      </md-input-container>
 
       <!-- submit button-->
-      <div class = "form-group col-lg-10">
+      <div class = "form-group col-lg-12">
         <md-button class="md-raised md-cornered" ng-click="submitForm()">Submit</md-button>
       </div>
     </div>
