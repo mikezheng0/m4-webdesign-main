@@ -186,6 +186,40 @@ button {
 }
 
 //slide show images Still need to convert to Sass mixin
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@include keyframes(moveSlideshow) {
+  0% { left: 0; }
+  100% { left: -1684px; }
+}
 
 #tech-slideshow {
   height: 200px;
@@ -194,57 +228,14 @@ button {
 }
 #tech-slideshow > div {
   height: 200px;
-  width: 2200px;
+  width: 2526px;
   background: url(../images/slideshow.jpg);
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-
-  -moz-transition:  opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  -webkit-transition: opacity 0.5s ease-out;
-  -ms-transition: opacity 0.5s ease-out;
-
-  /* Slow */
-  -webkit-animation: moveSlideshow 60s linear infinite;
-  -moz-animation:    moveSlideshow 60s linear infinite;
-
-  -webkit-transform: translate3d(0,0,0); /* Performance */
-
-}
-
-@-webkit-keyframes moveSlideshow {
-  0%   {
-    -webkit-transform: translateX(0);
-    -moz-transform:    translateX(0);
-    -ms-transform:     translateX(0);
-    -o-transform:      translateX(0);
-    transform:         translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-1684px);
-    -moz-transform:    translateX(-1684px);
-    -ms-transform:     translateX(-1684px);
-    -o-transform:      translateX(-1684px);
-    transform:         translateX(-1684px);
-  }
-}
-@-moz-keyframes moveSlideshow {
-  0%   {
-    -webkit-transform: translateX(0);
-    -moz-transform:    translateX(0);
-    -ms-transform:     translateX(0);
-    -o-transform:      translateX(0);
-    transform:         translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-1684px);
-    -moz-transform:    translateX(-1684px);
-    -ms-transform:     translateX(-1684px);
-    -o-transform:      translateX(-1684px);
-    transform:         translateX(-1684px);
-  }
+  @include transition(opacity 0.5s ease-out);
+  @include animation('moveSlideshow 60s linear infinite');
 }
 
 
@@ -318,5 +309,9 @@ button {
   background-color: transparent;
   text-decoration: none;
   color:$colorSet3;
+}
+
+.md-input{
+  border-color:white;
 }
 

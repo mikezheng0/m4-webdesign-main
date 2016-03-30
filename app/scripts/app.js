@@ -39,4 +39,11 @@ angular
     $mdIconProvider
       .iconSet('social', 'img/icons/sets/social-icons.svg', 24)
       .defaultIconSet('img/icons/sets/core-icons.svg', 24);
+  })
+  .config(function($mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+      .backgroundPalette('yellow');
+    $mdThemingProvider.theme('default').foregroundPalette[4] = "white";
+    $mdThemingProvider.theme('default').foregroundPalette[3] = "white";
+
   });
