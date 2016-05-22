@@ -9,11 +9,25 @@
   <div id="tech-slideshow-1"></div>
 </div>
 
+<section id="team">
+  <div class="container">
+    <h1>The Team</h1>
+    <div layout="row">
+      <div class="member-container" layout="column" flex ng-repeat="member in teamMembers" layout-align="center center">
+        <div class="image-container"></div>
+        <h2>{{member.name}}</h2>
+        <p>{{member.description}}</p>
+      </div>
+    </div>
+    </div>
+</section>
+
 <section id="contact">
   <div class="container">
     <div ng-include="contactView"></div>
   </div>
 </section>
+
 
 <footer>
   <md-button ng-click="toTheTop()">Back to Top</md-button>

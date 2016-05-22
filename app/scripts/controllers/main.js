@@ -9,6 +9,23 @@
  */
 angular.module('m4WebDevApp')
   .controller('MainCtrl', function($scope, $document, $http){
+    $scope.teamMembers =[{
+      id: 0,
+      name: "Matt Lee",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+    }, {
+      id: 1,
+      name: "Matt Martin",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+    }, {
+      id: 2,
+      name: "Mike Zheng",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+    }, {
+      id: 3,
+      name: "Mahesh Jeheva",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+    }]
       $scope.toTheTop = function() {
         $document.scrollTopAnimated(0, 1000).then(function() {
           console && console.log('You just scrolled to the top!');
@@ -20,8 +37,6 @@ angular.module('m4WebDevApp')
       };
     $scope.aboutView = "views/about.html";
     $scope.contactView = "views/contact.html";
-
-
   })
   .value('duScrollOffset', 50)
   .value('duScrollBottomSpy', true);

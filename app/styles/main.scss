@@ -351,3 +351,32 @@ button {
   background-repeat: no-repeat;
   background-position-y: 70px;
 }
+
+#team{
+  padding: 60px 0;
+  h1{
+    font-size: 4em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.87);
+  }
+  .member-container{
+    padding: 50px 0;
+  }
+  .image-container{
+    height: 175px;
+    width: 175px;
+    background-color: #F96006;
+    border-radius: 50%;
+  }
+  h2{
+    margin: 40px 0;
+    color: teal;
+    text-align: center;
+  }
+  p {
+    color: rgba(0,0,0,0.54);
+  }
+  [layout="column"]:not(:last-of-type){
+    margin-right: 30px;
+  }
+}
