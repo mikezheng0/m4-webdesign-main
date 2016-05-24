@@ -19,6 +19,7 @@ angular.module('m4WebDevApp')
         $document.scrollToElementAnimated(section3);
       };
     $scope.aboutView = "views/about.html";
+    $scope.intouchView = "views/intouch.html";
     $scope.contactView = "views/contact.html";
 
 

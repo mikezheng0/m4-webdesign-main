@@ -145,7 +145,7 @@ button {
 
 #about{
    background-color: $colorSet4;
-   padding: 150px 0 150px 0;
+   padding: 100px 0;
  }
 #contact{
   padding: 30px 0 50px 0;
@@ -300,6 +300,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1700px;
+    width: auto;
+  }
+}
 .contact-hyperlink{
   text-decoration: none;
   color: black;
@@ -315,6 +321,51 @@ button {
   border-color:white;
 }
 
-md-card-content label, input {
-  color: black;
+
+.about-header{
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+.em-h2{
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+}
+.about-head{
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.about-para{
+  color: rgba(0,0,0,0.54);
+}
+.about-text{
+  padding: 30px;
+  background-color: #E6E6E6;
+  h2{
+    margin-top:5px;
+  }
+}
+.about-section{
+  height: 700px;
+  background-image: url('../images/aboutus.png');
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-position-y: 70px;
+}
+
+.intouch-section {
+  height: 500px;
+  width: 100%;
+  background-color: #009688;
+}
+#contactinfo {
+  margin-bottom: 1.3%;
+}
+
+@media screen and (min-width: 730px)
+{
+  #contactinfo {
+    margin-bottom: 53%;
+  }
 }
