@@ -380,3 +380,8 @@ button {
     margin-right: 30px;
   }
 }
+@media (max-width: 599px){
+  .about-section {
+  height: auto;
+}
+}
