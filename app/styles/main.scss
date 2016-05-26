@@ -311,6 +311,7 @@ button {
     width: 100%;
   }
 }
+
 .contact-hyperlink{
   text-decoration: none;
   color: black;
@@ -397,29 +398,23 @@ button {
   }
 }
 
-@media screen and (max-width: 468px) {
-  .contact {
-    margin: 0px;
-    width: 100%;
-  }
-
-  #contact_us {
-    width: 100%;
-  }
-
+@media screen and (max-width: 1190px) {
   #contactinfo {
-    width: 100%;
+    width: 40%;
   }
 
-  .intouch-section {
-    padding-top: 20px;
-  }
 }
 
 .text {
   text-align: left;
   color: #FFFFFF;
   width: 45%;
+}
+
+#main {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -10%;
 }
 
 @media screen and (max-width: 680px) {
@@ -433,6 +428,36 @@ button {
 
   #contactinfo {
     width: 100%;
-    height: 300px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  #contact_us {
+    width: 100%;
+    display: block;
+  }
+
+  #contactinfo {
+    display: block;
+    width: 100%;
+  }
+
+  #main {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -45%;
+    .layout-row {
+      flex-direction: column;
+    }
+  }
+
+  .contact {
+    margin: 0px;
+    width: 100%;
+  }
+
+  .intouch-section {
+    padding-top: 20px;
+  }
+}
+
