@@ -310,6 +310,7 @@ button {
     max-width: 100%;
     width: 100%;
   }
+
 }
 .contact-hyperlink{
   text-decoration: none;
@@ -358,7 +359,37 @@ button {
 .md-input{
   border-color:white;
 }
-
+.about-header{
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+.em-h2{
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+}
+.about-head{
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.about-para{
+  color: rgba(0,0,0,0.54);
+}
+.about-text{
+  padding: 30px;
+  background-color: #E6E6E6;
+  h2{
+    margin-top:5px;
+  }
+}
+.about-section{
+  height: 700px;
+  background-image: url('../images/aboutus.png');
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-position-y: 70px;
+}
 
 .about-header{
   text-transform: uppercase;
@@ -468,4 +499,37 @@ button {
     width: 100%;
     height: 300px;
   }
+}
+#team{
+  padding: 60px 0;
+  h1{
+    font-size: 4em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.87);
+  }
+  .member-container{
+    padding: 50px 0;
+  }
+  .image-container{
+    height: 175px;
+    width: 175px;
+    background-color: #F96006;
+    border-radius: 50%;
+  }
+  h2{
+    margin: 40px 0;
+    color: teal;
+    text-align: center;
+  }
+  p {
+    color: rgba(0,0,0,0.54);
+  }
+  [layout="column"]:not(:last-of-type){
+    margin-right: 30px;
+  }
+}
+@media (max-width: 599px){
+  .about-section {
+  height: auto;
+}
 }
