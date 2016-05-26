@@ -9,6 +9,7 @@
 
 module.exports = function (grunt) {
 
+  grunt.loadNpmTasks('grunt-angular-service');
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
@@ -24,7 +25,7 @@ module.exports = function (grunt) {
     app: require('./bower.json').appPath || 'app',
     dist: 'server/dist'
   };
-
+  
   // Define the configuration for all the tasks
   grunt.initConfig({
 

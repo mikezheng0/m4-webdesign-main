@@ -321,7 +321,40 @@ button {
   text-decoration: none;
   color:$colorSet3;
 }
-
+#services{
+  background-color: $colorSet2;
+  padding: 100px 0 100px 0;
+  color: $colorSet2;
+  h2{
+    color: #ffffff;
+    position: relative;
+  }
+  .service-tiles {
+    background-color: #ffffff;
+    text-align: center;
+    .serv-desc {
+      display: none;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: $colorSet3;
+      color: white;
+    }
+  }
+    .service-tiles:hover{
+      h4{
+        display: none;
+      }
+      .serv-desc{
+        display: block;
+        text-align: left;
+        padding: 15px;
+        h4{
+          display: block;
+        }
+      }
+    }
+  }
 .md-input{
   border-color:white;
 }
