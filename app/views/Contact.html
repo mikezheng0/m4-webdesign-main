@@ -1,89 +1,91 @@
-<div class="contact" flex layout-align="center center">
-  <md-card class="column" id="contact_us">
-    <md-card-title>
-      <h2 style="text-align: left; padding-top: 0px;">Contact Us<i class="fa fa-users" aria-hidden="true" style="padding-left: 5px;"></i></h2>
-    </md-card-title>
-    <form name="contactform" novalidate ng-controller="ContactCtrl">
-      <md-card-content class="row" layout-align="space-between">
-        <div id="temp-style"></div>
-        <fieldset style="margin: 10px;">
-          <!-- name -->
-          <md-input-container class="md-block col-lg-6">
-            <label style="color: black">Name</label>
-            <input md-maxlength="30" required md-no-asterisk name="name" ng-model="user.name">
-            <div ng-messages="user.name.$error">
-              <div ng-message="required">This is required.</div>
-              <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-            </div>
-          </md-input-container>
-
-          <!-- organization -->
-          <md-input-container class="md-block col-lg-6">
-            <label style="color: black">Organization</label>
-            <input md-maxlength="30" required md-no-asterisk name="organization" ng-model="user.organization">
-            <div ng-messages="user.organization.$error">
-              <div ng-message="required">This is required.</div>
-              <div ng-message="md-maxlength">The organization has to be less than 30 characters long.</div>
-            </div>
-          </md-input-container>
-
-          <!-- email -->
-          <md-input-container class="md-block col-lg-6">
-            <label style="color: black">Email</label>
-            <input required type="email" name="email" ng-model="user.email"
-                     minlength="4" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-            <div ng-messages="user.email.$error" role="alert">
-              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">Your email must be between 4 and 100 characters long and look like an e-mail address.</div>
-            </div>
-          </md-input-container>
-
-          <!-- phone number -->
-          <md-input-container class="md-block col-lg-6">
-            <label style="color: black">Phone Number</label>
-            <input required type="email" name="phone" ng-model="user.phone"
-                     minlength="4" maxlength="100" ng-pattern="/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/" />
-            <div ng-messages="user.phone.$error" role="alert">
-              <div ng-message-exp="['minlength', 'maxlength', 'pattern']">Your email must be between 4 and 100 characters long and look like an e-mail address.</div>
-            </div>
-          </md-input-container>
-
-          <!-- message -->
-          <md-input-container class="md-block col-lg-12">
-            <label style="color: black">Biography</label>
-            <textarea style="color: black" ng-model="user.message" md-maxlength="5000" rows="8" md-select-on-focus></textarea>
-          </md-input-container>
-
-          <!-- submit button-->
-          <div class = "form-group col-lg-12">
-            <md-button class="md-raised md-cornered" ng-click="submitForm()">Submit</md-button>
-          </div>
-        </fieldset>
-      </md-card-content>
-
-      <!--<hr style="border-top:1px solid black">-->
-      <!--<md-card-actions layout="row" layout-align="center center" style="float: left;">
-        <a style="color: black;" class="contact-hyperlink form-group col-md-4 md-subhead"  title="FACEBOOK" href="https://www.facebook.com/M4-Web-Development-1136716383018907/?ref=hl"><img src="images/facebook_alt.png" style="width: 50px;">Like us on Facebook</a>
-        <a style="color: black;" class="contact-hyperlink form-group col-md-4 md-subhead" title="TWITTER" href="https://twitter.com/M4WebDev"><img src="images/twitter_alt.png" style="width: 50px;">Follow us on Twitter</a>
-        <a style="color: black;" class="contact-hyperlink form-group col-md-4 md-subhead" title="LINKEDIN" href="https://ca.linkedin.com/in/m4-web-development-49466b118"><img src="images/linkedin_alt.png" style="width: 50px;">Visit us on Linkedin</a>
-      </md-card-actions>-->
-      <!--<hr style="border-top:1px solid black">-->
-      </form>
-  </md-card>
-  <md-card flex id="contactinfo" class="column">
-    <md-card-content>
-      <md-card-title style="padding-top: 0px;">
-        <h2 style="padding-top: 0%;">Contact Info<i class="fa fa-info" aria-hidden="true" style="padding-left: 5px;"></i></h2>
+<div class="container" layout-align="center center" id="main" layout="row" vertilize-container>
+  <div layout="row" class="row-eq-height" id="section">
+    <md-card vertilize id="contact_us" layout="column">
+      <md-card-title>
+        <h2 style="text-align: left; padding-top: 0px;">Contact Us<i class="fa fa-users" aria-hidden="true" style="padding-left: 5px;"></i></h2>
       </md-card-title>
+      <form name="contactform" novalidate ng-controller="ContactCtrl">
+        <md-card-content class="row" layout-align="space-between">
+          <div id="temp-style"></div>
+          <fieldset style="margin: 10px;">
+            <!-- name -->
+            <md-input-container class="md-block col-lg-6">
+              <label style="color: black">Name</label>
+              <input md-maxlength="30" required md-no-asterisk name="name" ng-model="user.name">
+              <div ng-messages="user.name.$error">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+              </div>
+            </md-input-container>
+
+            <!-- organization -->
+            <md-input-container class="md-block col-lg-6">
+              <label style="color: black">Organization</label>
+              <input md-maxlength="30" required md-no-asterisk name="organization" ng-model="user.organization">
+              <div ng-messages="user.organization.$error">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The organization has to be less than 30 characters long.</div>
+              </div>
+            </md-input-container>
+
+            <!-- email -->
+            <md-input-container class="md-block col-lg-6">
+              <label style="color: black">Email</label>
+              <input required type="email" name="email" ng-model="user.email"
+                       minlength="4" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+              <div ng-messages="user.email.$error" role="alert">
+                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">Your email must be between 4 and 100 characters long and look like an e-mail address.</div>
+              </div>
+            </md-input-container>
+
+            <!-- phone number -->
+            <md-input-container class="md-block col-lg-6">
+              <label style="color: black">Phone Number</label>
+              <input required type="email" name="phone" ng-model="user.phone"
+                       minlength="4" maxlength="100" ng-pattern="/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/" />
+              <div ng-messages="user.phone.$error" role="alert">
+                <div ng-message-exp="['minlength', 'maxlength', 'pattern']">Your email must be between 4 and 100 characters long and look like an e-mail address.</div>
+              </div>
+            </md-input-container>
+
+            <!-- message -->
+            <md-input-container class="md-block col-lg-12">
+              <label style="color: black">Biography</label>
+              <textarea style="color: black" ng-model="user.message" md-maxlength="5000" rows="8" md-select-on-focus></textarea>
+            </md-input-container>
+
+            <!-- submit button-->
+            <div class = "form-group col-lg-12">
+              <md-button class="md-raised md-cornered" ng-click="submitForm()">Submit</md-button>
+            </div>
+          </fieldset>
+        </md-card-content>
+
+        <!--<hr style="border-top:1px solid black">-->
+        <!--<md-card-actions layout="row" layout-align="center center" style="float: left;">
+          <a style="color: black;" class="contact-hyperlink form-group col-md-4 md-subhead"  title="FACEBOOK" href="https://www.facebook.com/M4-Web-Development-1136716383018907/?ref=hl"><img src="images/facebook_alt.png" style="width: 50px;">Like us on Facebook</a>
+          <a style="color: black;" class="contact-hyperlink form-group col-md-4 md-subhead" title="TWITTER" href="https://twitter.com/M4WebDev"><img src="images/twitter_alt.png" style="width: 50px;">Follow us on Twitter</a>
+          <a style="color: black;" class="contact-hyperlink form-group col-md-4 md-subhead" title="LINKEDIN" href="https://ca.linkedin.com/in/m4-web-development-49466b118"><img src="images/linkedin_alt.png" style="width: 50px;">Visit us on Linkedin</a>
+        </md-card-actions>-->
+        <!--<hr style="border-top:1px solid black">-->
+        </form>
+    </md-card la>
+    <md-card vertilize id="contactinfo" layout="column">
       <md-card-content>
-        <p><i class="fa fa-envelope-o" aria-hidden="true" style="padding-right: 10px; font-size: 2em;"></i>m4webdev@gmail.com</p>
-        <p><i class="fa fa-mobile" aria-hidden="true" style="padding-right: 10px; font-size: 2em;"></i>(905)-802-2305</p>
-        <div layout="row" layout-align="start end">
-          <div><a href="https://www.facebook.com/M4-Web-Development-1136716383018907/?fref=ts"><i class="fa fa-facebook-square" aria-hidden="true" style="color: white; font-size: 3em; padding-right: 5px;"></i></a></div>
-          <div><a href="https://twitter.com/M4WebDev"><i class="fa fa-twitter-square" aria-hidden="true" style="color: white; font-size: 3em; padding-right: 5px;"></i></a></div>
-          <div><a href=""><i class="fa fa-linkedin-square" aria-hidden="true" style="color: white; font-size: 3em;"></i></a></div>
-        </div>
-        <p style="margin-bottom: 241px;"></p>
+        <md-card-title style="padding-top: 0px;">
+          <h2 style="padding-top: 0%;">Contact Info<i class="fa fa-info" aria-hidden="true" style="padding-left: 5px;"></i></h2>
+        </md-card-title>
+        <md-card-content>
+          <p><i class="fa fa-envelope-o" aria-hidden="true" style="padding-right: 10px; font-size: 2em;"></i>m4webdev@gmail.com</p>
+          <p><i class="fa fa-mobile" aria-hidden="true" style="padding-right: 10px; font-size: 2em;"></i>(905)-802-2305</p>
+          <div layout="row" layout-align="start">
+            <div><a href="https://www.facebook.com/M4-Web-Development-1136716383018907/?fref=ts"><i class="fa fa-facebook-square" aria-hidden="true" style="color: white; font-size: 3em; padding-right: 5px;"></i></a></div>
+            <div><a href="https://twitter.com/M4WebDev"><i class="fa fa-twitter-square" aria-hidden="true" style="color: white; font-size: 3em; padding-right: 5px;"></i></a></div>
+            <div><a href=""><i class="fa fa-linkedin-square" aria-hidden="true" style="color: white; font-size: 3em;"></i></a></div>
+          </div>
+          <p style="padding-bottom: 0.5px"></p>
+        </md-card-content>
       </md-card-content>
-    </md-card-content>
-  </md-card>
+    </md-card>
+  </div>
 </div>

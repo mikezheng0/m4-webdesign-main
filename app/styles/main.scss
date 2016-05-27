@@ -4,10 +4,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 // color scheming
 
-$colorSet1: #fae596;
-$colorSet2: #3fb0ac;
-$colorSet3:rgb(23,62,67);
-$colorSet4: #dddfd4;
+$primary-color-dark:   #00796B;
+$primary-color:        #009688;
+$primary-color-light:  #B2DFDB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FF5722;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -117,7 +121,7 @@ a:hover {
   background: #fff;
 }
 a.active {
-  background: $colorSet1;
+  background: $accent-color;
   color: #fff;
 }
 .wrap {
@@ -144,12 +148,12 @@ button {
 // ADDED AUTHOR CSS
 
 #about{
-   background-color: $colorSet4;
+   background-color: white;
    padding: 100px 0;
  }
 .contactsection {
   padding: 30px 0 50px 0;
-  background-color: $colorSet3;
+  background-color: white;
   color: white;
 }
 
@@ -271,10 +275,10 @@ button {
 .md-tile-left {
   margin-right:0!important;
   padding-left:24px;
-  color: $colorSet3;
+  color: $primary-color-dark;
 }
 #temp-style{
-  background-color: $colorSet3;
+  background-color: $primary-color-dark;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -302,7 +306,7 @@ button {
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1700px;
+    max-width: 1200px;
     width: auto;
   }
 
@@ -312,6 +316,7 @@ button {
   }
 
 }
+
 .contact-hyperlink{
   text-decoration: none;
   color: black;
@@ -320,12 +325,12 @@ button {
 .contact-hyperlink:hover{
   background-color: transparent;
   text-decoration: none;
-  color:$colorSet3;
+  color:$primary-color-dark;
 }
 #services{
-  background-color: $colorSet2;
+  background-color: $primary-color;
   padding: 100px 0 100px 0;
-  color: $colorSet2;
+  color: $primary-color;
   h2{
     color: #ffffff;
     position: relative;
@@ -338,12 +343,17 @@ button {
       width: 100%;
       height: 100%;
       text-align: center;
-      background-color: $colorSet3;
+      background-color: $primary-color-dark;
       color: white;
+    }
+    .serv-img{
+      width: 100%;
+      height: 100%;
+      text-align: center;
     }
   }
     .service-tiles:hover{
-      h4{
+      .serv-img{
         display: none;
       }
       .serv-desc{
@@ -378,7 +388,8 @@ button {
 }
 .about-text{
   padding: 30px;
-  background-color: #E6E6E6;
+  background-color: $primary-color-dark;
+  color: white;
   h2{
     margin-top:5px;
   }
@@ -410,7 +421,8 @@ button {
 }
 .about-text{
   padding: 30px;
-  background-color: #E6E6E6;
+  background-color: $primary-color-dark;
+  color: white;
   h2{
     margin-top:5px;
   }
@@ -461,22 +473,9 @@ button {
   }
 }
 
-@media screen and (max-width: 468px) {
-  .contact {
-    margin: 0px;
-    width: 100%;
-  }
-
-  #contact_us {
-    width: 100%;
-  }
-
+@media screen and (max-width: 1190px) {
   #contactinfo {
-    width: 100%;
-  }
-
-  .intouch-section {
-    padding-top: 20px;
+    width: 40%;
   }
 }
 
@@ -484,6 +483,12 @@ button {
   text-align: left;
   color: #FFFFFF;
   width: 45%;
+}
+
+#main {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -10%;
 }
 
 @media screen and (max-width: 680px) {
@@ -497,11 +502,12 @@ button {
 
   #contactinfo {
     width: 100%;
-    height: 300px;
   }
 }
+
 #team{
   padding: 60px 0;
+  background-color: white;
   h1{
     font-size: 4em;
     text-transform: uppercase;
@@ -533,3 +539,36 @@ button {
   height: auto;
 }
 }
+
+
+@media screen and (max-width: 480px) {
+  #contact_us {
+    width: 100%;
+    display: block;
+  }
+
+  #contactinfo {
+    display: block;
+    width: 100%;
+  }
+
+  #main {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -45%;
+    .layout-row {
+      flex-direction: column;
+    }
+  }
+
+  .contact {
+    margin: 0px;
+    width: 100%;
+  }
+
+  .intouch-section {
+    padding-top: 20px;
+  }
+}
+
+

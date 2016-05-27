@@ -14,32 +14,32 @@
       {
         'id': 0,
         'name':'Web Development',
-        'image':'',
+        'image':'images/web-dev.png',
         'description': 'Description about what this is'
       },{
         'id': 1,
         'name':'Mobile App Development',
-        'image':'',
+        'image':'images/app-design.png',
         'description': 'Description about what this is'
       },{
         'id': 2,
         'name':'Stack Migration',
-        'image':'',
+        'image':'images/stack-migration.png',
         'description': 'Description about what this is'
       },{
         'id': 3,
         'name':'Search Engine Optimization',
-        'image':'',
+        'image':'images/SEO.png',
         'description': 'Description about what this is'
       },{
         'id': 4,
         'name':'Web Maintenance',
-        'image':'',
+        'image':'images/web-mainten.png',
         'description': 'Description about what this is'
       },{
         'id': 5,
         'name':'Social Media Packages',
-        'image':'',
+        'image':'images/social-packages.png',
         'description': 'Description about what this is'
       }
     ];
