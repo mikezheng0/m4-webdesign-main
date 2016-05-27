@@ -278,6 +278,12 @@ button {
 }
 
 /* Responsive: Portrait tablets and up */
+#main {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -10%;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
@@ -297,6 +303,10 @@ button {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+
+  #main {
+    margin-top: -29%;
   }
 }
 
@@ -377,8 +387,8 @@ button {
 
 #in_touch {
   float: left;
-  width: 65%;
-  margin-left: 11%;
+  width: 45%;
+  margin-left: 22%;
 }
 
 .contact {
@@ -411,11 +421,6 @@ button {
   width: 45%;
 }
 
-#main {
-  width: 80%;
-  margin-left: 10%;
-  margin-top: -10%;
-}
 
 @media screen and (max-width: 680px) {
   .text {
@@ -458,6 +463,16 @@ button {
 
   .intouch-section {
     padding-top: 20px;
+    img {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 760px)
+{
+  #main {
+    margin-top: -25%;
   }
 }
 
