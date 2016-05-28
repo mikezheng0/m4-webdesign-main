@@ -302,6 +302,10 @@ button {
   .jumbotron {
     border-bottom: 0;
   }
+  #team > .container {
+  	max-width: none;
+  	width: auto;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -570,5 +574,3 @@ button {
     padding-top: 20px;
   }
 }
-
-
