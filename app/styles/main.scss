@@ -4,10 +4,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 // color scheming
 
-$colorSet1: #fae596;
-$colorSet2: #3fb0ac;
-$colorSet3:rgb(23,62,67);
-$colorSet4: #dddfd4;
+$primary-color-dark:   #00796B;
+$primary-color:        #009688;
+$primary-color-light:  #B2DFDB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FF5722;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -117,7 +121,7 @@ a:hover {
   background: #fff;
 }
 a.active {
-  background: $colorSet1;
+  background: $accent-color;
   color: #fff;
 }
 .wrap {
@@ -144,12 +148,12 @@ button {
 // ADDED AUTHOR CSS
 
 #about{
-   background-color: $colorSet4;
+   background-color: white;
    padding: 100px 0;
  }
 .contactsection {
   padding: 30px 0 50px 0;
-  background-color: $colorSet3;
+  background-color: white;
   color: white;
 }
 
@@ -271,10 +275,10 @@ button {
 .md-tile-left {
   margin-right:0!important;
   padding-left:24px;
-  color: $colorSet3;
+  color: $primary-color-dark;
 }
 #temp-style{
-  background-color: $colorSet3;
+  background-color: $primary-color-dark;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -304,15 +308,21 @@ button {
   .jumbotron {
     border-bottom: 0;
   }
+<<<<<<< HEAD
 
   #main {
     margin-top: -16%;
+=======
+  #team > .container {
+  	max-width: none;
+  	width: auto;
+>>>>>>> de9e2949d14994009927f1f4ab550bb756d7c18c
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1700px;
+    max-width: 1200px;
     width: auto;
   }
 
@@ -320,6 +330,7 @@ button {
     max-width: 100%;
     width: 100%;
   }
+
 }
 
 .contact-hyperlink{
@@ -330,13 +341,82 @@ button {
 .contact-hyperlink:hover{
   background-color: transparent;
   text-decoration: none;
-  color:$colorSet3;
+  color:$primary-color-dark;
 }
-
+#services{
+  background-color: $primary-color;
+  padding: 100px 0 100px 0;
+  color: $primary-color;
+  h2{
+    color: #ffffff;
+    position: relative;
+  }
+  .service-tiles {
+    background-color: #ffffff;
+    text-align: center;
+    .serv-desc {
+      display: none;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: $primary-color-dark;
+      color: white;
+    }
+    .serv-img{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+  }
+    .service-tiles:hover{
+      .serv-img{
+        display: none;
+      }
+      .serv-desc{
+        display: block;
+        text-align: left;
+        padding: 15px;
+        h4{
+          display: block;
+        }
+      }
+    }
+  }
 .md-input{
   border-color:white;
 }
-
+.about-header{
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+.em-h2{
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+}
+.about-head{
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.about-para{
+  color: rgba(0,0,0,0.54);
+}
+.about-text{
+  padding: 30px;
+  background-color: $primary-color-dark;
+  color: white;
+  h2{
+    margin-top:5px;
+  }
+}
+.about-section{
+  height: 700px;
+  background-image: url('../images/aboutus.png');
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-position-y: 70px;
+}
 
 .about-header{
   text-transform: uppercase;
@@ -357,7 +437,8 @@ button {
 }
 .about-text{
   padding: 30px;
-  background-color: #E6E6E6;
+  background-color: $primary-color-dark;
+  color: white;
   h2{
     margin-top:5px;
   }
@@ -408,11 +489,38 @@ button {
   }
 }
 
+@media screen and (max-width: 760px)
+{
+  #main {
+    margin-top: -25%;
+  }
+}
+
+@media screen and (max-width: 760px)
+{
+  #main {
+    margin-top: -25%;
+  }
+}
+
+@media screen and (max-width: 760px)
+{
+  #main {
+    margin-top: -25%;
+  }
+}
+
+@media screen and (max-width: 760px)
+{
+  #main {
+    margin-top: -25%;
+  }
+}
+
 @media screen and (max-width: 1190px) {
   #contactinfo {
     width: 40%;
   }
-
 }
 
 .text {
@@ -435,6 +543,42 @@ button {
     width: 100%;
   }
 }
+
+#team{
+  padding: 60px 0;
+  background-color: white;
+  h1{
+    font-size: 4em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.87);
+  }
+  .member-container{
+    padding: 50px 0;
+  }
+  .image-container{
+    height: 175px;
+    width: 175px;
+    background-color: #F96006;
+    border-radius: 50%;
+  }
+  h2{
+    margin: 40px 0;
+    color: teal;
+    text-align: center;
+  }
+  p {
+    color: rgba(0,0,0,0.54);
+  }
+  [layout="column"]:not(:last-of-type){
+    margin-right: 30px;
+  }
+}
+@media (max-width: 599px){
+  .about-section {
+  height: auto;
+}
+}
+
 
 @media screen and (max-width: 480px) {
   #contact_us {
@@ -468,4 +612,3 @@ button {
     }
   }
 }
-

@@ -1,8 +1,10 @@
 diff a/app/styles/main.scss b/app/styles/main.scss	(rejected hunks)
-@@ -315,3 +315,6 @@
-   border-color:white;
+@@ -306,7 +306,7 @@
+   }
+ 
+   #main {
+-    margin-top: -29%;
++    margin-top: -16%;
+   }
  }
  
-+md-card-content label, input {
-+  color: black;
-+}

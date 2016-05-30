@@ -1,7 +1,7 @@
 /**
  * Created by mike on 3/23/16.
  */
-
+'use strict';
 angular.module('m4WebDevApp')
   .directive("scroll", function ($window) {
 
