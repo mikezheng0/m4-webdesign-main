@@ -1,0 +1,8 @@
+diff a/app/styles/main.scss b/app/styles/main.scss	(rejected hunks)
+@@ -315,3 +315,6 @@
+   border-color:white;
+ }
+ 
++md-card-content label, input {
++  color: black;
++}
