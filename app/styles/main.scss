@@ -519,11 +519,19 @@ button {
   }
   .member-container{
     padding: 50px 0;
+    margin-right: 5%;
+    margin-left: 5%;
   }
   .image-container{
+
     height: 175px;
     width: 175px;
     background-color: #F96006;
+    border-radius: 50%;
+  }
+  .member-image{
+    height: 175px;
+    width: 175px;
     border-radius: 50%;
   }
   h2{
