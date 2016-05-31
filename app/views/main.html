@@ -16,7 +16,7 @@
     <h1>The Team</h1>
     <div layout="row" layout-sm="column" layout-xs="column">
       <div class="member-container" layout="column" flex ng-repeat="member in teamMembers" layout-align="center center">
-        <div class="image-container"></div>
+        <div class="image-container"><img class ="member-image" src = "{{member.photo}}"></div>
         <h2>{{member.name}}</h2>
         <p>{{member.description}}</p>
       </div>
