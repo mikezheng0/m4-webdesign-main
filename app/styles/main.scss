@@ -405,7 +405,7 @@ button {
   background-image: url('../images/aboutus.png');
   background-size: 900px;
   background-repeat: no-repeat;
-  background-position: center center;;
+  background-position-y: 70px;
 }
 
 .intouch-section {
@@ -449,6 +449,9 @@ button {
 @media screen and (max-width: 1190px) {
   #contactinfo {
     width: 40%;
+  }
+  .about-section{
+    background-position: center center;
   }
 }
 
@@ -509,8 +512,9 @@ button {
 }
 @media (max-width: 599px){
   .about-section {
-  height: auto;
-}
+    height: auto;
+  }
+
 }
 
 
