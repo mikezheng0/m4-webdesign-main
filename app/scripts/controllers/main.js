@@ -43,10 +43,6 @@ angular.module('m4WebDevApp')
     $scope.intouchView = "views/intouch.html";
     $scope.contactView = "views/contact.html";
     $scope.servicesView = "views/services.html";
-<<<<<<< HEAD
-=======
-
->>>>>>> 4980372cdb999f134248355d5cd9663964b64d63
   })
   .value('duScrollOffset', 50)
   .value('duScrollBottomSpy', true);
