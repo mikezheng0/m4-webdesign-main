@@ -164,7 +164,7 @@ button {
   color: white;
 }
 
-//input.ng-invalid.ng-touched {
+    //input.ng-invalid.ng-touched {
 //  border: 1px solid #FF0000;
 //}
 //input.ng-valid.ng-touched {
@@ -396,7 +396,7 @@ button {
     }
   }
 .md-input{
-  border-color:white;
+  border-color:black;
 }
 
 .about-header{
@@ -577,4 +577,10 @@ button {
   .intouch-section {
     padding-top: 20px;
   }
+}
+md-input-container.md-default-theme.md-input, md-input-container .md-input {
+  border-color: grey;
+}
+md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input {
+  border-color: rgb(221,44,0);
 }
